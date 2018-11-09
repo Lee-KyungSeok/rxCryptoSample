@@ -1,0 +1,34 @@
+ext {
+    // Build configuration
+    minSdkVersion = 21
+    compileSdkVersion = 28
+    targetSdkVersion = 28
+
+    // Gradle plugin
+    androidPluginVersion = '3.2.1'
+
+    // Library
+    androidxVersion = '1.0.0'
+    googleMaterialVersion = '1.0.0'
+    constraintLayoutVersion = '2.0.0-alpha2'
+    archComponentVersion = '1.1.1'
+    archPagingVersion = '1.0.1'
+    glideVersion = '4.8.0'
+    lottieVersion = '2.5.5'
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.10.0'
+    gsonVersion = '2.8.5'
+    rxJavaVersion = '2.2.2'
+    rxAndroidVersion = '2.1.0'
+    rxRelayVersion = '2.1.0'
+    rxBindingVersion = '3.0.0-alpha1'
+    rxLifecycleVersion = '3.0.0'
+    rxPreferenceVersion = '2.0.0'
+    storIOVersion = '3.0.0'
+    butterKnifeVersion = '9.0.0-rc1'
+    twitter4jVersion = '4.0.6'
+    javatuplesVersion = '1.2'
+    junitVersion = '4.12'
+    testRunnerVersion = '1.1.0'
+    espressoVersion = '3.1.0'
+}

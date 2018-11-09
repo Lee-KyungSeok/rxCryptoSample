@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.seok.rxcryptocurrencyprac"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:$androidxVersion"
+    implementation "androidx.preference:preference:$androidxVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidxVersion"
+    implementation "androidx.cardview:cardview:$androidxVersion"
+    implementation "com.google.android.material:material:$googleMaterialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // RxJava & RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+
+    // RxBinding
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxBindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-recyclerview:$rxBindingVersion"
+
+    // RxLifecycle
+    implementation "com.trello.rxlifecycle3:rxlifecycle:$rxLifecycleVersion"
+    implementation "com.trello.rxlifecycle3:rxlifecycle-android:$rxLifecycleVersion"
+    implementation "com.trello.rxlifecycle3:rxlifecycle-components:$rxLifecycleVersion"
+
+    // RxPreference
+    implementation "com.f2prateek.rx.preferences2:rx-preferences:$rxPreferenceVersion"
+
+    // StoreIO
+    implementation "com.pushtorefresh.storio3:sqlite:$storIOVersion"
+    implementation "com.pushtorefresh.storio3:sqlite-annotations:$storIOVersion"
+    annotationProcessor "com.pushtorefresh.storio3:sqlite-annotations-processor:$storIOVersion"
+
+    // twitter4j
+    implementation "org.twitter4j:twitter4j-core:$twitter4jVersion"
+    implementation "org.twitter4j:twitter4j-stream:$twitter4jVersion"
+
+    // ButterKnife
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
+    // JavaTuples
+    implementation "org.javatuples:javatuples:1.2"
+
+    // test
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test:runner:$testRunnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+}
